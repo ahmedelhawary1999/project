@@ -1,0 +1,318 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+header {
+    height: 70px;
+    padding: 10px 0;
+}
+
+header .top-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+header .top-bar .logo {
+    color: #055999;
+}
+
+header .top-bar .logo span {
+    display: block;
+}
+
+header .top-bar .logo span.big-logo {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+header .top-bar .logo span.small-logo {
+    font-weight: bold;
+    text-align: right;
+}
+
+header .top-bar nav .mobile-nav {
+    display: none;
+}
+
+header .top-bar nav .main-nav .close-btn {
+    display: none;
+}
+
+header .top-bar nav li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 45px;
+}
+
+header .top-bar nav li:last-child {
+    margin-right: 0;
+}
+
+header .top-bar nav li.active {
+    background: #055999;
+    padding: 8px;
+}
+
+header .top-bar nav li.active a {
+    color: rgb(218, 30, 30);
+}
+
+header .top-bar nav li a {
+    color: #055999;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.banner {
+    background-image: url(../img/abstract-art-blur-bright-373543.jpg);
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: calc(100vh - 70px);
+    position: relative;
+}
+
+.banner .welcome-msg {
+    position: absolute;
+    bottom: 8%;
+    color: rgb(0, 0, 0);
+}
+
+.banner .welcome-msg h1 {
+    text-transform: uppercase;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.service {
+    padding: 20px 0 40px;
+}
+
+.service .service-header {
+    text-align: center;
+}
+
+.service .service-header * {
+    margin-bottom: 15px;
+}
+
+.service .box-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.service .box-container .service-box {
+    -ms-flex-preferred-size: 24%;
+    flex-basis: 24%;
+    text-align: center;
+    background: #c9c9c9;
+    padding: 80px 15px 40px;
+    -webkit-transition: background .5s ease-in-out;
+    transition: background .5s ease-in-out;
+}
+
+.service .box-container .service-box:hover {
+    background: #fff;
+}
+
+.service .box-container .service-box svg {
+    margin-bottom: 45px;
+    font-size: 52px;
+    color: #444;
+}
+
+.service .box-container .service-box h3,
+.service .box-container .service-box p {
+    margin-bottom: 25px;
+}
+
+.service .box-container .service-box p {
+    color: #414141;
+}
+
+.service .box-container .service-box button {
+    padding: 12px 24px;
+    background: #055999;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.goTop {
+    position: fixed;
+    right: 4%;
+    bottom: 4%;
+    width: 45px;
+    height: 45px;
+    background: #055999;
+    text-align: center;
+    font-size: 24px;
+    line-height: 45px;
+    color: #fff;
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 4px 6px #ccc;
+    box-shadow: 0px 4px 6px #ccc;
+    cursor: pointer;
+    display: none;
+}
+
+
+/* Start Model Style */
+
+.model-container {
+    display: none;
+}
+
+.modal-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .7);
+}
+
+.model-container .modal-body {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    background: #fff;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 30px 60px;
+}
+
+.model-container .modal-body * {
+    margin: 20px 0;
+}
+
+.model-container .modal-body button {
+    background: #055999;
+    padding: 12px 24px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.model-container .close-model {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+
+/* End Model Style */
+
+@media(max-width:1200px) {}
+
+@media(max-width:992px) {
+    .service .box-container .service-box {
+        -ms-flex-preferred-size: 49%;
+        flex-basis: 49%;
+        margin-bottom: 2%;
+    }
+}
+
+@media(max-width:768px) {
+    header .top-bar nav .main-nav {
+        display: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        position: fixed;
+        z-index: 99999;
+        right: 0;
+        top: 0;
+        width: 40%;
+        height: 100vh;
+        background: #055999;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-transform: translate(100%);
+        transform: translate(100%);
+        -webkit-transition: -webkit-transform 1s cubic-bezier(0.87, 0.46, 0.12, 0.74);
+        transition: -webkit-transform 1s cubic-bezier(0.87, 0.46, 0.12, 0.74);
+        transition: transform 1s cubic-bezier(0.87, 0.46, 0.12, 0.74);
+        transition: transform 1s cubic-bezier(0.87, 0.46, 0.12, 0.74), -webkit-transform 1s cubic-bezier(0.87, 0.46, 0.12, 0.74);
+    }
+    header .top-bar nav .main-nav .close-btn {
+        display: block;
+    }
+    .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 28px;
+        color: #fff;
+        cursor: pointer;
+    }
+    .active-nav {
+        -webkit-transform: translate(0%) !important;
+        transform: translate(0%) !important;
+    }
+    header .top-bar nav li {
+        margin-right: 0;
+    }
+    header .top-bar nav li a {
+        color: #fff;
+    }
+    header .top-bar nav li.active {
+        padding: 0;
+    }
+    header .top-bar nav .mobile-nav {
+        display: block;
+    }
+    header .top-bar nav .mobile-nav svg {
+        font-size: 26px;
+        color: #055999;
+        cursor: pointer;
+    }
+}
+
+@media(max-width:576px) {
+    .banner .welcome-msg h1 {
+        font-size: 32px;
+    }
+    .service .box-container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
